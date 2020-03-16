@@ -1,0 +1,4 @@
+# Non config files
+./deluge
+./configstore
+./gtk-2.0
