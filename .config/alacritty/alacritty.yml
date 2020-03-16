@@ -34,3 +34,7 @@ colors:
     white:   '0xfbf1c7'
     
 draw_bold_text_with_bright_colors: false
+
+font:
+    size: 14
+    family: Source Code Pro
