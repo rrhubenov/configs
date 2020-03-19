@@ -1,4 +1,4 @@
-" Plugins
+"Plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
@@ -13,14 +13,31 @@ Plug 'ncm2/ncm2-path'
 " Vim Theme
 Plug 'dikiaap/minimalist'
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+" Multi-entry selection UI.
+Plug 'junegunn/fzf'
+
 
 call plug#end()
 
+" Language Server
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ }
 
 " Color scheme
 set t_Co=256
 syntax on
 colorscheme minimalist
+
+" Permenant undo
+set undodir=~/.vimdid
+set undofile
+
 
 " Basic settings
 set nocompatible
@@ -38,6 +55,12 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
+
+" No arrow keys
+nnoremap <up> <nop>
+nnoremap <left> <nop>
+nnoremap <down> <nop>
+nnoremap <right> <nop>
 
 " enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
