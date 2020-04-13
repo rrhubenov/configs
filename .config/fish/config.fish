@@ -1,3 +1,10 @@
+# Run tmux on startup
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
+
+
 # Alias for exa instead of ls
 if command -v exa > /dev/null
 	abbr -a l 'exa'
