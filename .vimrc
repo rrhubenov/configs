@@ -16,6 +16,11 @@ Plug 'dag/vim-fish'
 " Vim Theme
 Plug 'dikiaap/minimalist'
 
+" C++ Syntax Highlighting
+Plug 'bfrg/vim-cpp-modern'
+
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
