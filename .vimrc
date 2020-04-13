@@ -10,6 +10,9 @@ Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 
+" Fish syntax highlighting
+Plug 'dag/vim-fish'
+
 " Vim Theme
 Plug 'dikiaap/minimalist'
 
